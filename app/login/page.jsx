@@ -37,9 +37,19 @@ export default function Login() {
       <h1>Login</h1>
       <form onSubmit={onSubmit}>
         <label htmlFor="email">Email</label>
-        <input type="email" name="email" onChange={handleChange} value={credentials.email}/>
+        <input
+          type="email"
+          name="email"
+          onChange={handleChange}
+          value={credentials.email}
+        />
         <label htmlFor="password">Contraseña</label>
-        <input type="password" name="password" onChange={handleChange} value={credentials.password}/>
+        <input
+          type="password"
+          name="password"
+          onChange={handleChange}
+          value={credentials.password}
+        />
         <button type="submit">Iniciar sesión</button>
         <p>{error && "Error al iniciar sesión, por favor intente de nuevo"}</p>
       </form>

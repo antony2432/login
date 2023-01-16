@@ -24,6 +24,4 @@ export default function loginHandler(req, res) {
   }
 
   res.status(401).json({ error: 'Invalid credentials' })
-  // console.log(email, password)
-  // res.status(200).json({token: 'token'})
 }
