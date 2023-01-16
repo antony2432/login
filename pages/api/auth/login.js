@@ -5,10 +5,10 @@ export default function loginHandler(req, res) {
   const { email, password } = req.body
   console.log(req.body)
 
-  if (email === 'antony@prueba.local' && password === 'admin') {
+  if (email === 'antony@conectica.com' && password === 'admin') {
     const token = jwt.sign({
       exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30,
-      email: 'antony@antony.local',
+      email: 'antony@conectica.com',
       username: 'antony Chuquival'
     }, 'secret',)
 
