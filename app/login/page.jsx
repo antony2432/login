@@ -43,7 +43,7 @@ export default function Login() {
         <h1 className="text-center text-3xl text-slate-400 mb-10">Login</h1>
         <div className="w-72 border border-slate-300 p-2 rounded-md focus:border-sky-500 focus:ring-1 focus:ring-sky-500 flex mb-5">
           <label htmlFor="email">
-            <HiOutlineMail className="text-3xl text-slate-400"/>
+            <HiOutlineMail className="text-3xl text-slate-400" />
           </label>
           <input
             type="email"
@@ -55,7 +55,9 @@ export default function Login() {
           />
         </div>
         <div className="w-72 border border-slate-300 p-2 rounded-md focus:border-sky-500 focus:ring-1 focus:ring-sky-500 flex mb-5">
-          <label htmlFor="password"><HiOutlineLockClosed className="text-3xl text-slate-400"/></label>
+          <label htmlFor="password">
+            <HiOutlineLockClosed className="text-3xl text-slate-400" />
+          </label>
           <input
             type="password"
             name="password"
@@ -71,7 +73,9 @@ export default function Login() {
         >
           Iniciar sesión
         </button>
-        <small className="text-red-500 mt-5">{error && "Error al iniciar sesión, por favor intente de nuevo"}</small>
+        <small className="text-red-500 mt-5">
+          {error && "Error al iniciar sesión, por favor intente de nuevo"}
+        </small>
       </form>
     </div>
   );
