@@ -19,7 +19,9 @@ export default function loginHandler(req, res) {
       maxAge: 1000 * 60 * 60 * 24 * 30,
       path: '/'
     })
+    console.log('llego aqui, antes de enviar por header')
     res.setHeader('Set-Cookie', serialized)
+    console.log('llego aqui')
     return res.json('login success', { token })
   }
 
