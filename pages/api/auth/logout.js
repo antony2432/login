@@ -10,7 +10,7 @@ export default function logoutHandler(req, res) {
     verify(myTokenName, 'secret')
     const serialized = serialize('myTokenName', null, {
       httpOnly: true,
-      secure: process.env.NODE_ENV !== 'production',
+      secure: true,
       sameSite: 'none', // none para cuando te comunicas con un backend externo
       maxAge: 0,
       path: '/'
