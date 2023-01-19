@@ -1,8 +1,6 @@
 import { verify } from 'jsonwebtoken'
 
 export default function profileHandler(req, res) {
-
-
   const { myTokenName } = req.cookies
 
   if (!myTokenName) {

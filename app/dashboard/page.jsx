@@ -1,30 +1,30 @@
-"use client";
-import axios from "axios";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+'use client'
+import axios from 'axios'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Dashboard() {
   const [user, setUser] = useState({
-    email: "",
-    username: "",
-  });
-  const router = useRouter();
+    email: '',
+    username: ''
+  })
+  const router = useRouter()
 
   const getProfile = async () => {
-    const response = await axios.get("/api/profile");
-    setUser(response.data);
-  };
+    const response = await axios.get('/api/profile')
+    setUser(response.data)
+  }
 
-  const logout = async (e) => {
-    e.preventDefault();
+  const logout = async e => {
+    e.preventDefault()
     try {
-      await axios.post("/api/auth/logout");
-      router.push("/login");
+      await axios.post('/api/auth/logout')
+      router.push('/login')
     } catch (error) {
-      console.log(error);
-      router.push("/login");
+      console.log(error)
+      router.push('/login')
     }
-  };
+  }
   return (
     <div>
       <h1>Dashboard</h1>
@@ -32,5 +32,5 @@ export default function Dashboard() {
       <button onClick={getProfile}>get profile</button>
       <button onClick={logout}>Logout</button>
     </div>
-  );
+  )
 }

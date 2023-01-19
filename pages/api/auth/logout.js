@@ -1,5 +1,5 @@
-import { verify } from "jsonwebtoken";
-import { serialize } from "cookie";
+import { verify } from 'jsonwebtoken'
+import { serialize } from 'cookie'
 export default function logoutHandler(req, res) {
   const { myTokenName } = req.cookies
   if (!myTokenName) {
