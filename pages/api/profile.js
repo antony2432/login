@@ -12,7 +12,7 @@ export default function profileHandler(req, res) {
   try {
     const user = verify(myTokenName, 'secret')
     console.log(user)
-    return res.json({ email: user.email, username: user.username })
+    return res.json({ email: user.email, username: user.username, role: user.role, name: user.name, apellido: user.apellido })
   } catch (error) {
     return res.status(401).json({ error: 'Invalid token' })
   }

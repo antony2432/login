@@ -8,8 +8,11 @@ export default function loginHandler(req, res) {
     if (email === 'user@dominio.com' && password === 'admin') {
       const token = jwt.sign({
         exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30,
-        email: 'user@dominio.com',
-        username: 'user name'
+        email: 'antony@conectica.com',
+        username: 'antony Chuquival',
+        role: 'admin',
+        name: 'Antony',
+        apellido: 'Chuquival'
       }, 'secret',)
 
       const serialized = serialize('myTokenName', token, {
